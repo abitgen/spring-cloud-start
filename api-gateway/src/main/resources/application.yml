@@ -1,0 +1,20 @@
+
+spring:
+  application:
+    name: gateway-ws
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          predicates:
+          - name: Path
+            args:
+              pattern: "'/'+serviceId+'/**'"
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone : http://localhost:8700/eureka
