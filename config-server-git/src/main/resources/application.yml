@@ -1,0 +1,22 @@
+
+spring:
+  application:
+    name: configServer
+  cloud:
+    config:
+      server:
+        git:
+          clone-on-start: true
+          uri: https://github.com/abitgen/spring-cloud-start-props # Your git config prop repo, should be private
+          username: abitgen # Your git username
+          password: ${MY_GIT_PASSWORD} # Your git password
+          force-pull: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+server:
+  port : 8601
+
+
