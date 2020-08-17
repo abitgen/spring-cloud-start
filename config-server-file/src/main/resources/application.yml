@@ -1,0 +1,20 @@
+
+spring:
+  application:
+    name: configServer
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: file:I:\Workspace\Intellij\Spring\spring-cloud-start\config-server-file\src\main\resources\config
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+server:
+  port : 8601
+
+
