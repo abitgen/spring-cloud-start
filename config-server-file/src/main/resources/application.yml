@@ -1,4 +1,3 @@
-
 spring:
   application:
     name: configServer
@@ -16,5 +15,14 @@ spring:
     password: guest
 server:
   port : 8601
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - health
+          - bus-refresh
+
 
 

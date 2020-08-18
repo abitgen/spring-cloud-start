@@ -33,7 +33,8 @@ dependencies {
     implementation("org.springframework.cloud:spring-cloud-config-server")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
-    //implementation("org.springframework.boot:spring-boot-bus-amqp")
+    // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-bus
+    implementation (group= "org.springframework.cloud", name= "spring-cloud-starter-bus-amqp")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
